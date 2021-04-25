@@ -1,20 +1,17 @@
 # Setting Up
 
-### Installation
+## Installation
 
 Before even doing anything else, you of course have to install the Discord.js and Akairo.  
 
-`npm i discord.js`  
-`npm i discord-akairo`  
-
-If you feel like working with SQLite or Sequelize later, install them too.  
-
-`npm i sqlite`  
-`npm i sequelize`  
+`npm i discord.js`
+`yarn add discord.js`
+`npm install ItsAuric/discord-akairo`
+`yarn add ItsAuric/discord-akairo`
 
 Once everything has been installed, your working directory should look something like this:  
 
-```
+```markdown
 mybot
 |____ node_modules
       bot.js

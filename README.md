@@ -57,16 +57,12 @@
 Requires Node 12+ and Discord.js v12.  
 
 *discord-akairo*  
-`npm install discord-akairo`
+`npm install ItsAuric/discord-akairo`
+`yarn add ItsAuric/discord-akairo`
 
 *discord.js*  
 `npm install discord.js`
-
-*sqlite (optional)*  
-`npm install sqlite`
-
-*sequelize (optional)*  
-`npm install sequelize`
+`yarn add discord.js`
 
 ## Links
 
