@@ -9,6 +9,7 @@ Let's implement per-guild prefixes.
 First, create a new SQLiteProvider or SequelizeProvider.  
 
 ```js
+const { Database } = require('sqlite3');
 const sqlite = require('sqlite');
 const sequelize = require('sequelize');
 
@@ -21,7 +22,7 @@ class CustomClient extends AkairoClient {
         });
 
         // With SQLite
-        this.settings = new SQLiteProvider(sqlite.open('path/to/db.sqlite'), 'table_name', {
+        this.settings = new SQLiteProvider(sqlite.open({ filename: 'path/to/db.sqlite', driver: Database }), 'table_name', {
             idColumn: 'guild_id',
             dataColumn: 'settings'
         });
