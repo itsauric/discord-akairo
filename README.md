@@ -1,3 +1,16 @@
+
+<div align="center">
+  <br />
+  <p>
+    <a href="https://discord-akairo.github.io"><img src="https://discord-akairo.github.io/static/logo.svg" width="546" alt="discord-akairo" /></a>
+  </p>
+  <br />
+  <p>
+    <a href="https://www.npmjs.com/package/@auric/discord-akairo"><img src="https://img.shields.io/npm/v/@auric/discord-akairo.svg?maxAge=3600" alt="NPM version" /></a>
+    <a href="https://www.npmjs.com/package/@auric/discord-akairo"><img src="https://img.shields.io/npm/dt/@auric/discord-akairo.svg?maxAge=3600" alt="NPM downloads" /></a>
+  </p>
+</div>
+
 # Features
 
 ## Completely modular commands, inhibitors, and listeners
