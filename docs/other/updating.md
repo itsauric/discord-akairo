@@ -1,6 +1,6 @@
 # Updating to v8
 
-### Breaking Changes
+## Breaking Changes
 
 This tutorial is for updating from Akairo v7 to v8.  
 Many changes were introduced in v8 so hopefully this guide can help you fix them.  
@@ -9,13 +9,13 @@ Not only are there changes within the framework, there are also changes with Dis
 You will have to update to Node 10 in order to use the libraries due to new JavaScript features.  
 
 The suggestions below are not an exhaustive list.  
-For a full changelog, see [here](https://github.com/discord-akairo/discord-akairo/releases).  
+For a full changelog, see [here](https://github.com/ItsAuric/discord-akairo/releases).  
 
 ### Renames
 
 Below are renames that will mostly be find-and-replace.  
 
-##### General 
+#### General
 
 The ClientUtil method `fetchMemberFrom` has been renamed to `fetchMember`.  
 
@@ -71,7 +71,7 @@ This means that you have to check if its a function before using it e.g.
 This allows for checking if a value was set, such as the default value of an argument.  
 Of course, if you already know that the property is or is not a function, then there is no need for changes.  
 
-##### Commands
+#### Commands
 
 The events `commandStarted` and `commandFinished` have new parameters.  
 `commandStarted` now passes `(message, command, args)` where `args` are the parsed args.  
@@ -93,7 +93,7 @@ All the CommandUtil parse information such as `command`, `prefix`, `alias` etc. 
 The `defaultPrompt` option has been changed to `argumentDefaults` which allow for more defaults.  
 You can simply move your options into `argumentDefaults.prompt`.  
 
-##### Arguments
+#### Arguments
 
 Argument parsing now uses a new parser.  
 Some behavior with whitespace and quotes may have changed.  
@@ -124,7 +124,7 @@ Now, it will attempt to fetch an Invite object.
 All features deprecated in v7.5.x have been removed as well as some unexpected removals.  
 Suggestions will be made for replacements.  
 
-##### General
+#### General
 
 Loading modules by instances is now unsupported.  
 This means you cannot do, for example, `module.exports = new Command(...)` or `handler.load(new Listener(...))`.  
@@ -148,7 +148,7 @@ An example of the `collect` method would be `new Argument(command, argOptions).c
 
 Selfbot support has been removed.  
 
-##### Commands
+#### Commands
 
 The command option `split` is now removed.  
 Instead, the `quoted` option is added, which can be true or false, defaulting to true.  
@@ -156,7 +156,7 @@ Instead, the `quoted` option is added, which can be true or false, defaulting to
 The `match` option on an argument can no longer be a function.  
 
 In the command `exec` function as well as the `commandStarted` event and some other places, the `edited` parameter is removed.  
-To see if the message was edited, you can check with `message.edited`.    
+To see if the message was edited, you can check with `message.edited`.
 
 The `dynamic` and `dynamicInt` types were removed.  
 Instead, use a union type e.g. `Argument.union('integer', 'string')`.  
