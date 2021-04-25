@@ -61,7 +61,7 @@
 - Resolvers for members, users, and others that can filter by name.
 - Shortcut methods for making embeds and collections.
 - Simple to use database providers.
-  - Built-in support for `sqlite` and `sequelize`.
+  - Built-in support for `mongoose`, `sqlite` and `sequelize`.
   - Works on entire table or single JSON column.
   - Caching data from databases.
 
