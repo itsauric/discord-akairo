@@ -1,6 +1,6 @@
 # Prefixes and Aliases
 
-### Mentioning
+## Mentioning
 
 Sometimes people can forget or not know the prefix for your bot, so letting them use command with a mention is useful.  
 This can be enabled with the `allowMention` option.  
@@ -38,7 +38,7 @@ Prefix overrides are command-specific prefixes.
 To use them, simply add the `prefix` option.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class SecretCommand extends Command {
     constructor() {

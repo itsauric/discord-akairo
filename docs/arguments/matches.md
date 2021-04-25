@@ -1,13 +1,13 @@
 # Matching Input
 
-### Entire Content
+## Entire Content
 
 Let's say you have a command that picks from a list inputted.  
 Obviously, you won't know how many things there are.  
 So, we need a different way of matching input instead of phrase by phrase.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PickCommand extends Command {
     constructor() {
@@ -34,7 +34,7 @@ module.exports = PickCommand;
 To remedy this, we will use the `match` option.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PickCommand extends Command {
     constructor() {
@@ -59,7 +59,7 @@ class PickCommand extends Command {
 module.exports = PickCommand;
 ```
 
-Now, the entire content, excluding the prefix and command of course, is matched. 
+Now, the entire content, excluding the prefix and command of course, is matched.
 
 ### Flags
 
@@ -69,7 +69,7 @@ This is where `flag` match comes in handy.
 Here is a command where the user can change the output with a flag:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 const exampleAPI = require('example-api');
 
 class StatsCommand extends Command {
@@ -114,7 +114,7 @@ Here, we will use `option` for unordered input.
 Similar to the above example, but this time, we have many different possibilities.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 const exampleAPI = require('example-api');
 
 class StatsCommand extends Command {
@@ -165,12 +165,12 @@ It will work, but will be extremely weird for the end users, so don't do it!
 
 ### Separate
 
-Let's say that we want our pick command to only work on numbers.    
+Let's say that we want our pick command to only work on numbers.
 This would mean having to deal with splitting then casting the types within the args!  
 We can do this with a custom separator using `separator` option alongside the `separate` match.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PickCommand extends Command {
     constructor() {
@@ -194,7 +194,7 @@ class PickCommand extends Command {
 }
 
 module.exports = PickCommand;
-``` 
+```
 
 The `separate` match matches the phrases individually into an array where each element is type casted one by one.  
 The `separator` option simply makes it so that all the input is separated via a certain character rather than by whitespace.  
@@ -221,5 +221,6 @@ Here are all the match types available in Akairo.
 - `none` matches nothing at all.
 
 The different match types have the following behavior with border whitespaces, quotes, and separators:  
+
 - `phrase`, `separate`, and `option` do not preserve any of the three.  
 - `rest`, `content`, `text` do preserve all three.  

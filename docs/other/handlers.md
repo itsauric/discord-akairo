@@ -1,13 +1,13 @@
 # Custom Handlers
 
-### And Custom Modules
+## And Custom Modules
 
 Internally, Akairo's handlers all extends AkairoHandler, and all modules extends AkairoModule.  
 So, you can create your own handlers and module types!  
 Create a new class for your module.  
 
 ```js
-const { AkairoModule } = require('discord-akairo');
+const { AkairoModule } = require('@auric/discord-akairo');
 
 class CustomModule extends AkairoModule {
     constructor(id, options = {}) {
@@ -31,7 +31,7 @@ We throw an error there just in case you forget to implement it.
 Then, create a new class for your handler:  
 
 ```js
-const { AkairoHandler } = require('discord-akairo');
+const { AkairoHandler } = require('@auric/discord-akairo');
 const CustomModule = require('./CustomModule');
 
 class CustomHandler extends AkairoHandler {
@@ -52,7 +52,7 @@ For the handler, the `super()` takes the client, the directory for the handler, 
 Now we can add it to our client if we so desire:  
 
 ```js
-const { AkairoClient } = require('discord-akairo');
+const { AkairoClient } = require('@auric/discord-akairo');
 const CustomHandler = require('./CustomHandler');
 
 class MyClient extends AkairoClient {

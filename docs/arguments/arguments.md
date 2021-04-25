@@ -1,6 +1,6 @@
 # Basic Arguments
 
-### Adding Numbers
+## Adding Numbers
 
 Commands should also have some user input, in the form of arguments.  
 In Akairo, arguments are the most complex things ever, so this tutorial will only go through the basics.  
@@ -8,7 +8,7 @@ In Akairo, arguments are the most complex things ever, so this tutorial will onl
 Let's make a command that takes three numbers and adds them up.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class AddCommand extends Command {
     constructor() {
@@ -30,7 +30,7 @@ Now we will add arguments in the command options with the `args` option.
 This option must be an array of objects, containing info for parsing.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class AddCommand extends Command {
     constructor() {

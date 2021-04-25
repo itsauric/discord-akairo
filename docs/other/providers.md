@@ -1,6 +1,6 @@
 # Using Providers
 
-### Storing Prefixes
+## Storing Prefixes
 
 Akairo comes with SQLiteProvider and SequelizeProvider, optional utility classes for databases.  
 Note that if you are doing something complicated with databases, you should use SQLite or Sequelize directly.  
@@ -12,7 +12,7 @@ First, create a new SQLiteProvider or SequelizeProvider.
 const sqlite = require('sqlite');
 const sequelize = require('sequelize');
 
-const { AkairoClient, SQLiteProvider, SequelizeProvider } = require('discord-akairo');
+const { AkairoClient, SQLiteProvider, SequelizeProvider } = require('@auric/discord-akairo');
 
 class CustomClient extends AkairoClient {
     constructor() {
@@ -83,7 +83,7 @@ class CustomClient extends AkairoClient {
 Values can be set with the `set` method:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PrefixCommand extends Command {
     constructor() {

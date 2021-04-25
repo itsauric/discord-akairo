@@ -1,6 +1,6 @@
 # Using Mongoose Provider
 
-### Storing Prefixes
+## Storing Prefixes
 
 Let's implement per-guild prefixes.  
 First, create a new MongooseProvider.
@@ -10,7 +10,7 @@ First, create a new MongooseProvider.
 // connect to database and then require this file (eg. bot.js)
 const model = require('./path/to/model'); // see Model Example below
 
-const { AkairoClient, MongooseProvider } = require('discord-akairo');
+const { AkairoClient, MongooseProvider } = require('@auric/discord-akairo');
 
 class CustomClient extends AkairoClient {
     constructor() {
@@ -61,7 +61,7 @@ class CustomClient extends AkairoClient {
 Values can be set with the `set` method:
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PrefixCommand extends Command {
     constructor() {

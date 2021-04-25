@@ -1,6 +1,6 @@
 # Basic Listeners
 
-### Setup
+## Setup
 
 Listeners are a basic concept in Node.js.  
 Problem is, you usually end up with loooooong files attaching listeners on your client.  
@@ -10,7 +10,7 @@ Let's add some listeners.
 You have to setup a `ListenerHandler` just like with commands and inhibitors.  
 
 ```js
-const { AkairoClient, CommandHandler, InhibitorHandler, ListenerHandler } = require('discord-akairo');
+const { AkairoClient, CommandHandler, InhibitorHandler, ListenerHandler } = require('@auric/discord-akairo');
 
 class MyClient extends AkairoClient {
     constructor() {
@@ -47,13 +47,13 @@ this.commandHandler.useListenerHandler(this.listenerHandler);
 this.listenerHandler.loadAll();
 ```
 
-### I'm Ready!
+### I'm Ready
 
-And now, we can make a listener!   
+And now, we can make a listener!
 Let's start with a simple client `ready` event.  
 
 ```js
-const { Listener } = require('discord-akairo');
+const { Listener } = require('@auric/discord-akairo');
 
 class ReadyListener extends Listener {
     constructor() {
@@ -102,7 +102,7 @@ They are emitted to the `messageBlocked` (anything with `pre` type or before) or
 Since we set the command handler to the key `commandHandler` up above, we have to use that as the `emitter` option.  
 
 ```js
-const { Listener } = require('discord-akairo');
+const { Listener } = require('@auric/discord-akairo');
 
 class CommandBlockedListener extends Listener {
     constructor() {

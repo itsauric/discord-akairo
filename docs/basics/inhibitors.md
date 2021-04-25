@@ -1,13 +1,13 @@
 # Basic Inhibitors
 
-### Setup
+## Setup
 
 Inhibitors are a way to monitor or block messages coming into the command handler.  
 Because inhibitors are another kind of module, we need another kind of handler.  
 To set it up, simply import and instantiate the `InhibitorHandler`, just like with the command handler.  
 
 ```js
-const { AkairoClient, CommandHandler, InhibitorHandler } = require('discord-akairo');
+const { AkairoClient, CommandHandler, InhibitorHandler } = require('@auric/discord-akairo');
 
 class MyClient extends AkairoClient {
     constructor() {
@@ -45,7 +45,7 @@ this.inhibitorHandler.loadAll();
 Create a folder named `inhibitors`, then a file there to make one.  
 
 ```js
-const { Inhibitor } = require('discord-akairo');
+const { Inhibitor } = require('@auric/discord-akairo');
 
 class BlacklistInhibitor extends Inhibitor {
     constructor() {

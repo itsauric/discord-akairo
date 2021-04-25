@@ -1,6 +1,6 @@
 # CommandUtil
 
-### Handling Edits
+## Handling Edits
 
 The CommandUtil class is a utility class for working with responses.  
 In order to make it available, you must enable `commandUtil`.  
@@ -24,7 +24,7 @@ With `handleEdits` on, the `send` methods will edit responses accordingly.
 This works for prompts as well.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class HelloCommand extends Command {
     constructor() {
@@ -56,7 +56,7 @@ The format for command is almost always `<prefix><alias> <arguments>`.
 CommandUtil stores all three of that and more for you.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class HelloCommand extends Command {
     constructor() {
@@ -94,4 +94,4 @@ This means an invalid input, e.g. `?not-a-command` will still be parsed with pre
 
 If you set the command handler option `storeMessages` to true, CommandUtil instances will start storing messages from prompts.  
 This means that prompts from the client as well as the user replies are stored within `message.util.messages`.  
-See the prompting sections under Arguments for more information about prompts. 
+See the prompting sections under Arguments for more information about prompts.

@@ -1,12 +1,12 @@
 # More Prompting
 
-### Optional Prompts
+## Optional Prompts
 
 Optional prompts are prompts that run if there was input, but the type casting failed.  
 If there was no input, it would go on as normal.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class HighestRoleCommand extends Command {
     constructor() {
@@ -48,7 +48,7 @@ Infinite prompts are prompts that go on and on until the user says stop.
 (You can customize the input, but by default it is `stop`.)  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PickCommand extends Command {
     constructor() {
@@ -83,4 +83,4 @@ module.exports = PickCommand;
 And with that, `args.items` is now an array of responses from the user.  
 Note that the `none` match is used, meaning nothing is matched in the original message.  
 Because this is an infinite prompt that goes across multiple messages, we don't want it to take input from the original message.  
-If you wish to allow a hybrid of matching and prompting multiple phrases, try using `separate` match with infinite prompts.   
+If you wish to allow a hybrid of matching and prompting multiple phrases, try using `separate` match with infinite prompts.

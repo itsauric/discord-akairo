@@ -85,7 +85,7 @@ There are other ways to do type-casting instead of a string literal too.
 The first way is with an array:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PokemonCommand extends Command {
     constructor() {
@@ -119,7 +119,7 @@ This means that if the array was `['GrasS', 'FIrE']` and the input was `grass`, 
 You can also do aliases with the array type like so:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PokemonCommand extends Command {
     constructor() {
@@ -159,7 +159,7 @@ So, the input of `leaf` will give you `grass`, `blue` will give you `water`, etc
 You can also use a regular expression as a type.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class AskCommand extends Command {
     constructor() {

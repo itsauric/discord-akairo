@@ -1,12 +1,12 @@
 # Unordered Arguments
 
-### Any Order!
+## Any Order
 
 Arguments can be made to be unordered.  
 For example, if you want a command where the arguments are a role and a member in any order:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class AddRoleCommand extends Command {
     constructor() {
@@ -53,7 +53,8 @@ Unordered arguments have a slightly different behavior when used with a default 
 
 If an unordered argument has a default and nothing matches, the default is used.  
 If there is a prompt and nothing matches:  
-  - If the prompt is optional, the default value is used.  
-  - If not, the prompt is started as if no input was given.  
+
+- If the prompt is optional, the default value is used.  
+- If not, the prompt is started as if no input was given.  
 
 So, if you do have a prompt, make sure the `optional` option is not used or else it will prompt not at all.  

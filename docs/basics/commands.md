@@ -1,13 +1,13 @@
 # Basic Commands
 
-### The Command Handler
+## The Command Handler
 
 In Akairo, the hierachy is that there are handlers which contains modules.  
 The handlers deals with loading modules and executing them.  
 For commands, we will import and instantiate the `CommandHandler`.  
 
 ```js
-const { AkairoClient, CommandHandler } = require('discord-akairo');
+const { AkairoClient, CommandHandler } = require('@auric/discord-akairo');
 
 class MyClient extends AkairoClient {
     constructor() {
@@ -53,13 +53,13 @@ We specified that the `directory` is in `./commands/`.
 So, go there, make a new file, and require Akairo.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 ```
 
 Here is a basic ping command:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PingCommand extends Command {
     constructor() {

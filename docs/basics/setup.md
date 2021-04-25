@@ -6,8 +6,8 @@ Before even doing anything else, you of course have to install the Discord.js an
 
 `npm i discord.js`
 `yarn add discord.js`
-`npm install ItsAuric/discord-akairo`
-`yarn add ItsAuric/discord-akairo`
+`npm install @auric/discord-akairo`
+`yarn add @auric/discord-akairo`
 
 Once everything has been installed, your working directory should look something like this:  
 
@@ -23,7 +23,7 @@ Inside `bot.js`, require `discord-akairo` and extend the `AkairoClient` class to
 As your bot gets more complicated, you may want to separate this client class from your main file.  
 
 ```js
-const { AkairoClient } = require('discord-akairo');
+const { AkairoClient } = require('@auric/discord-akairo');
 
 class MyClient extends AkairoClient {
     constructor() {
@@ -44,7 +44,7 @@ If you would like to have multiple owners simply add those with an array.
 We want to use Discord.js's `disableMentions` option too.  
 
 ```js
-const { AkairoClient } = require('discord-akairo');
+const { AkairoClient } = require('@auric/discord-akairo');
 
 class MyClient extends AkairoClient {
     constructor() {

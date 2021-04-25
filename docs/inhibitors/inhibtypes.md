@@ -1,6 +1,6 @@
 # Inhibitor Types
 
-### More Coverage
+## More Coverage
 
 Right now, your inhibitors only runs before a command.  
 They do not actually run on all messages.  
@@ -8,7 +8,7 @@ They do not actually run on all messages.
 To change that, change the `type` option.  
 
 ```js
-const { Inhibitor } = require('discord-akairo');
+const { Inhibitor } = require('@auric/discord-akairo');
 
 class BlacklistInhibitor extends Inhibitor {
     constructor() {

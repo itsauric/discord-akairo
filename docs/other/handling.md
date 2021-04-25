@@ -1,11 +1,11 @@
 # Handling Modules
 
-### Categorizing
+## Categorizing
 
 You can categorize a module with the `category` option.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class PingCommand extends Command {
     constructor() {
@@ -34,7 +34,7 @@ With that said, this means you can add, remove, or reload modules while the bot 
 Here is a basic command that reloads the inputted ID:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class ReloadCommand extends Command {
     constructor() {
@@ -63,11 +63,11 @@ module.exports = ReloadCommand;
 Ways you can reload a module includes:  
 
 - Individually:
-    - `<AkairoHandler>.reload(moduleID)`
-    - `<AkairoModule>.reload()`
+  - `<AkairoHandler>.reload(moduleID)`
+  - `<AkairoModule>.reload()`
 - Many at once:
-    - `<AkairoHandler>.reloadAll()`
-    - `<Category>.reloadAll()`
+  - `<AkairoHandler>.reloadAll()`
+  - `<Category>.reloadAll()`
 
 ### Removing and Adding
 

@@ -1,4 +1,4 @@
-declare module 'discord-akairo' {
+declare module '@auric/discord-akairo' {
     import {
         BufferResolvable, Client, ClientOptions, Collection,
         Message, MessageAttachment, MessageEmbed,

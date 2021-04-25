@@ -18,7 +18,7 @@ Let's start with a basic prompt.
 We will be reusing this command:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class HighestRoleCommand extends Command {
     constructor() {
@@ -48,7 +48,7 @@ Since prompting will have the user retry until it is finished, `default` won't d
 Now, add the `prompt` property with the options you want.  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class HighestRoleCommand extends Command {
     constructor() {
@@ -124,7 +124,7 @@ Those prompt options would now be applied to all prompts that do not have those 
 Or, with a command with similar arguments:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class AddCommand extends Command {
     constructor() {

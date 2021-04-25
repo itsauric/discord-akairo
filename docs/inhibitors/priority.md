@@ -1,6 +1,6 @@
 # Inhibitor Priority
 
-### Me First!
+## Me First
 
 Sometimes multiple inhibitors can block a message.  
 For example, you may have an inhibitor for blacklisting within a server, and another for a global blacklist.  
@@ -10,7 +10,7 @@ Whenever both inhibitors block a message, the `commandBlocked` event would fire 
 If you want the global blacklist inhibitor's instead you can use the `priority` option.  
 
 ```js
-const { Inhibitor } = require('discord-akairo');
+const { Inhibitor } = require('@auric/discord-akairo');
 const globalBlacklist = require('something');
 
 class GlobalBlacklistInhibitor extends Inhibitor {

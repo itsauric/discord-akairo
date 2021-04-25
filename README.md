@@ -57,8 +57,8 @@
 Requires Node 12+ and Discord.js v12.  
 
 *discord-akairo*  
-`npm install ItsAuric/discord-akairo`
-`yarn add ItsAuric/discord-akairo`
+`npm install @auric/discord-akairo`
+`yarn add @auric/discord-akairo`
 
 *discord.js*  
 `npm install discord.js`

@@ -1,9 +1,10 @@
 # Generator Arguments
 
-## Yield!
+## Yield
 
 The most powerful aspect of Akairo's argument parsing is the fact that it is implemented using generators.  
 With this, you can do things such as:
+
 - Have an argument depend on the previous argument
 - Branch your argument parsing
 - Run an argument multiple times
@@ -13,7 +14,7 @@ With this, you can do things such as:
 To get started, take this command:  
 
 ```js
-const { Command } = require('discord-akairo');
+const { Command } = require('@auric/discord-akairo');
 
 class GeneratorCommand extends Command {
     constructor() {
