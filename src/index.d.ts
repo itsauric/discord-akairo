@@ -175,6 +175,7 @@ declare module '@auric/discord-akairo' {
         public regex: RegExp | RegexSupplier;
         public typing: boolean;
         public userPermissions: PermissionResolvable | PermissionResolvable[] | MissingPermissionSupplier;
+        public enabled: boolean
 
         public before(message: Message): any;
         public condition(message: Message): boolean;
@@ -569,6 +570,7 @@ declare module '@auric/discord-akairo' {
         typing?: boolean;
         userPermissions?: PermissionResolvable | PermissionResolvable[] | MissingPermissionSupplier;
         quoted?: boolean;
+        enabled?: boolean
     }
 
     export interface CommandHandlerOptions extends AkairoHandlerOptions {
