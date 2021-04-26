@@ -244,11 +244,10 @@ class CommandHandler extends AkairoHandler {
      * @param {string} [filepath] - Filepath of module.
      * @returns {void}
      */
+    // eslint-disable-next-line consistent-return
     register(command, filepath) {
-        if (!command.enabled) {
-            return false;
-        }
-        
+        if (!command.enabled) return false;
+
         super.register(command, filepath);
 
         for (let alias of command.aliases) {
@@ -662,7 +661,7 @@ class CommandHandler extends AkairoHandler {
                     return true;
                 }
             } else if (message.guild) {
-                const missing = message.member.voice.channelID ? message.member.voice.channel.permissionsFor(this.client.user).missing(command.clientPermissions) : message.channel.permissionsFor(this.client.user).missing(command.clientPermissions);
+                const missing = message.channel.permissionsFor(this.client.user).missing(command.clientPermissions);
                 if (missing.length) {
                     this.emit(CommandHandlerEvents.MISSING_PERMISSIONS, message, command, 'client', missing);
                     return true;
@@ -688,7 +687,7 @@ class CommandHandler extends AkairoHandler {
                         return true;
                     }
                 } else if (message.guild) {
-                    const missing = message.member.voice.channelID ? message.member.voice.channel.permissionsFor(message.author).missing(command.userPermissions) : message.channel.permissionsFor(message.author).missing(command.userPermissions);
+                    const missing = message.channel.permissionsFor(message.author).missing(command.userPermissions);
                     if (missing.length) {
                         this.emit(CommandHandlerEvents.MISSING_PERMISSIONS, message, command, 'user', missing);
                         return true;
