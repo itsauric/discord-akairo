@@ -658,7 +658,7 @@ class CommandHandler extends AkairoHandler {
                     return true;
                 }
             } else if (message.guild) {
-                const missing = message.member.voice?.channel.permissionsFor(this.client.user).missing(command.clientPermissions) || message.channel.permissionsFor(this.client.user).missing(command.clientPermissions);
+                const missing = message.member.voice ? message.member.voice.channel.permissionsFor(this.client.user).missing(command.clientPermissions) : message.channel.permissionsFor(this.client.user).missing(command.clientPermissions);
                 if (missing.length) {
                     this.emit(CommandHandlerEvents.MISSING_PERMISSIONS, message, command, 'client', missing);
                     return true;
@@ -684,7 +684,7 @@ class CommandHandler extends AkairoHandler {
                         return true;
                     }
                 } else if (message.guild) {
-                    const missing = message.member.voice?.channel.permissionsFor(this.client.user).missing(command.userPermissions) || message.channel.permissionsFor(this.client.user).missing(command.userPermissions);
+                    const missing = message.member.voice ? message.member.voice.channel.permissionsFor(this.client.user).missing(command.userPermissions) : message.channel.permissionsFor(this.client.user).missing(command.userPermissions);
                     if (missing.length) {
                         this.emit(CommandHandlerEvents.MISSING_PERMISSIONS, message, command, 'user', missing);
                         return true;
