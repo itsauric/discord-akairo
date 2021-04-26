@@ -1,6 +1,6 @@
 {
   "name": "@auric/discord-akairo",
-  "version": "8.1.6",
+  "version": "8.1.7",
   "description": "A highly customizable bot framework for Discord.js.",
   "main": "./src/index.js",
   "types": "./src/index.d.ts",
