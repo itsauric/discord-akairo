@@ -245,6 +245,10 @@ class CommandHandler extends AkairoHandler {
      * @returns {void}
      */
     register(command, filepath) {
+        if (!command.enabled) {
+            return false;
+        }
+        
         super.register(command, filepath);
 
         for (let alias of command.aliases) {
