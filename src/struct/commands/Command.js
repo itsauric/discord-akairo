@@ -98,7 +98,7 @@ class Command extends AkairoModule {
          * @type {number}
          */
         this.ratelimit = ratelimit;
-        
+
         /**
          * Decides wether or not to actually run the command
          * @type {boolean}

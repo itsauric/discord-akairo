@@ -246,8 +246,6 @@ class CommandHandler extends AkairoHandler {
      */
     // eslint-disable-next-line consistent-return
     register(command, filepath) {
-        if (!command.enabled) return false;
-
         super.register(command, filepath);
 
         for (let alias of command.aliases) {
@@ -612,6 +610,11 @@ class CommandHandler extends AkairoHandler {
                 this.emit(CommandHandlerEvents.COMMAND_BLOCKED, message, command, BuiltInReasons.OWNER);
                 return true;
             }
+        }
+
+        if (!command.enabled) {
+            this.emit(CommandHandlerEvents.COMMAND_BLOCKED, message, command, BuiltInReasons.COMMAND_DISABLED);
+            return true;
         }
 
         if (command.channel === 'guild' && !message.guild) {

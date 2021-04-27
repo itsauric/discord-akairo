@@ -82,7 +82,8 @@ module.exports = {
         BOT: 'bot',
         OWNER: 'owner',
         GUILD: 'guild',
-        DM: 'dm'
+        DM: 'dm',
+        COMMAND_DISABLED: 'command_disabled'
     },
     TimeUnits: {
         years: {
