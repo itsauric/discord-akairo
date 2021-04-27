@@ -103,7 +103,7 @@ class Command extends AkairoModule {
          * Decides wether or not to actually run the command
          * @type {boolean}
          */
-        this.enabled = enabled;
+        this.enabled = Boolean(enabled);
 
         /**
          * Default prompt options.
